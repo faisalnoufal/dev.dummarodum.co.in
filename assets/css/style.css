@@ -43,7 +43,7 @@ ion-icon:hover {
   transform: scale(1.5);
 }
 .ordernow {
-  display: flex;    
+  display: flex;
   border: 2px #fefe19 solid;
   padding: 7px 14px;
   border-radius: 40px;
@@ -73,7 +73,8 @@ a:hover {
   color: #fefe19;
 }
 .banner {
-  height: 100vh;
+  margin-top: 100px;
+  /* height: 100vh; */
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -102,6 +103,10 @@ a:hover {
 
   .banner img {
     max-width: 450px;
+  }
+  .banner {
+    height: 100vh;
+    display: flex;
   }
 }
 
