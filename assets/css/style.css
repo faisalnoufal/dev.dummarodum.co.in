@@ -74,7 +74,6 @@ a:hover {
 }
 .banner {
   margin-top: 100px;
-  /* height: 100vh; */
   display: flex;
   align-items: center;
   flex-wrap: wrap;
