@@ -90,9 +90,11 @@ a:hover {
   display: flex;
 }
 
+
+
 @media (min-width: 992px) {
   .navbar-brand img {
-    width: 120px;
+    width: 70px;
   }
   .social {
     position: sticky;
@@ -108,6 +110,11 @@ a:hover {
     height: 85vh;
     display: flex;
   }
+}
+
+@media (min-width: 1200px) {
+  .navbar-brand img {
+    width: 120px;
 }
 
 @media (min-width: 576px) {
