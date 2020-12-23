@@ -31,8 +31,11 @@
 
 </head>
 <style>
-  .banner {
-    height: 100vh;
+  #ecard {
+    display: inline;
+    background-color: rgb(233, 233, 233);
+    height: 300px;
+    width: 300px;
   }
 </style>
 
@@ -191,7 +194,7 @@
     <div class="container">
       <form>
         <h1 class="mb-5">
-          Reserve <span class="biriyani"> Biriyani </span>
+          Pre-Order <span class="biriyani"> Biriyani </span>
           <!-- <span class="text-muted">Story</span> -->
         </h1>
         <div class="row jumbotron">
@@ -253,47 +256,51 @@
             <label for="kb">Kids Biriyani</label>
             <input type="number" class="form-control" name="kb" id="kb" placeholder="0">
           </div>
-          <div class="col-md-4 mb-3">
-            <h6 class="mt-3 font-weight-bold">Mode of Payment</h6>
-            <div class="bg-dark p-3">
-              <div>
-                <input type="radio" value="" id="radio01" name="radioDefault">
-                <label for="radio01">Cash on Delivery</label>
-              </div>
-              <div>
-                <input type="radio" value="" id="radio02" name="radioDefault">
-                <label for="radio02">Credit/Debit Card</label>
-              </div>
-              <div>
-                <input type="radio" value="" id="radio03" name="radioDefault">
-                <label for="radio03">UPI Payment</label>
-              </div>
-            </div>
+          <div class="col-sm-6 form-group">
+            <label for="comments">Comments</label>
+            <textarea class="form-control" id="validationTextarea" placeholder="Enter you comments"></textarea>
           </div>
+        </div>
+        <div class="col-sm-6 col-lg-4 form-group">
+          <h6 class="mt-3 font-weight-bold">Mode of Payment</h6>
+          <div class="bg-dark p-3">
+            <div>
+              <input type="radio" value="radio01" id="radio01" name="radioDefault" onClick="CB(this.value);">
+              <label for="radio01">UPI Payment</label>
+            </div>
 
-          <!-- <div class="col-sm-6 form-group">
+            <div>
+              <input type="radio" value="radio02" id="radio02" name="radioDefault" type="checked"
+                onClick="CB(this.value);">
+              <label for="radio03">Cash on Delivery</label>
+            </div>
+            <!-- <div id="ecard"> Hello</div> -->
+          </div>
+        </div>
+
+        <!-- <div class="col-sm-6 form-group">
             <label for="pass">Password</label>
             <input type="Password" name="password" class="form-control" id="pass" placeholder="Enter your password."
               required>
           </div> -->
-          <!-- <div class="col-sm-6 form-group">
+        <!-- <div class="col-sm-6 form-group">
             <label for="pass2">Confirm Password</label>
             <input type="Password" name="cnf-password" class="form-control" id="pass2"
               placeholder="Re-enter your password." required>
           </div> -->
-          <div class="col-sm-12 mt-4">
-            <input type="checkbox" class="form-check d-inline" id="chb" required><label for="chb"
-              class="form-check-label">&nbsp;I accept all terms and conditions.
-            </label>
-          </div>
-
-          <div class="col-sm-12 form-group mt-3">
-            <button class="btn btn-primary float-right">Submit</button>
-          </div>
-
+        <div class="col-sm-12 mt-4">
+          <input type="checkbox" class="form-check d-inline" id="chb" required><label for="chb"
+            class="form-check-label">&nbsp;I accept all terms and conditions.
+          </label>
         </div>
-      </form>
+
+        <div class="col-sm-12 form-group mt-3">
+          <button class="btn btn-primary float-right">Submit</button>
+        </div>
+
     </div>
+    </form>
+  </div>
 
 
 </body>
@@ -336,6 +343,21 @@
       });
     }, false);
   })();
+</script>
+
+<script>
+  function CB(bg) {
+    var url;
+    if (bg == "radio01") {
+      url = "/assets/images/QRfaisal.jpg";
+      document.getElementById("ecard").style.backgroundImage = "url(" + url + ")";
+    }
+    else if (bg == "radio02") {
+      url = "http://www.menucool.com/slider/prod/image-slider-3.jpg";
+      document.getElementById("ecard").style.backgroundImage = "url(" + url + ")";
+    }
+  }
+
 </script>
 
 </body>
