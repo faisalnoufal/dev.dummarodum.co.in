@@ -91,6 +91,11 @@ a:hover {
   display: flex;
 }
 
+.form-control {
+  display: inline-block;
+  background-color: black;
+  color:#fefe19
+}
 
 
 @media (min-width: 992px) {
