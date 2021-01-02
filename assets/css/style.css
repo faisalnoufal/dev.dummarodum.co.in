@@ -97,6 +97,9 @@ a:hover {
   color:#fefe19
 }
 
+.row > *{
+  margin-top: 15px;
+}
 
 @media (min-width: 992px) {
   .navbar-brand img {
