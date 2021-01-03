@@ -86,6 +86,12 @@ a:hover {
   max-width: 100%;
 }
 
+.card {
+    background-color: #171717; 
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.5rem;
+  }
+
 .featurette-heading {
   position: relative;
   display: flex;
